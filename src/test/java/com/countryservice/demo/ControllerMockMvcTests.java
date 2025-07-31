@@ -35,12 +35,16 @@ import com.countryservice.demo.beans.Country;
 import com.countryservice.demo.controllers.CountryController;
 import com.countryservice.demo.services.CountryService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.junit4.SpringRunner;
 
 @SpringBootTest(classes= {ControllerMockMvcTests.class})
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @ComponentScan(basePackages = "com.countryservice.demo")
 @AutoConfigureMockMvc
 @ContextConfiguration
+@RunWith(SpringRunner.class)
+
 public class ControllerMockMvcTests {
 	
 	@Autowired
