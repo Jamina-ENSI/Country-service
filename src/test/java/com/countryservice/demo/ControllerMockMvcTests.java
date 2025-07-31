@@ -40,7 +40,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @ComponentScan(basePackages = "com.countryservice.demo")
 @AutoConfigureMockMvc
-//@ContextConfiguration
+@ContextConfiguration
 public class ControllerMockMvcTests {
 	
 	@Autowired
