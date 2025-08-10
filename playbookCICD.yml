@@ -6,7 +6,7 @@
   vars:
     image_name: my-country-service
     image_tag: v1
-    dockerfile_path: ../country-service
+    dockerfile_path: './Dockerfile'
     docker_registry_username : jamina2385
     docker_registry_password : $Titi2385yahoo$
 
@@ -55,6 +55,7 @@
         namespace: jenkins
         src: service.yaml
         kubeconfig: config    
+
 
 
 
