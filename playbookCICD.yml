@@ -47,12 +47,12 @@
       kubernetes.core.k8s:
         state: present
         src: deployment.yaml
-        kubeconfig: C:/Users/HP-EliteBook/.kube/config # Path to your kubeconfig file   
+        kubeconfig: .kube/config # Path to your kubeconfig file   
         remote_src: true     
 
     - name: Apply Kubernetes Service
       kubernetes.core.k8s:
         state: present
         src: service.yaml
-        kubeconfig: C:/Users/HP-EliteBook/.kube/config
+        kubeconfig: .kube/config
         remote_src: true       
