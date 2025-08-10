@@ -2,7 +2,6 @@
 - name: Build and Deploy Docker Image to Kubernetes
   hosts: localhost # Or your build/deployment server
   connection: local
-  become: true # If necessary for Docker/Kubernetes commands
 
   vars:
     image_name: my-country-service
@@ -56,3 +55,4 @@
         namespace: jenkins
         src: service.yaml
         kubeconfig: config    
+
