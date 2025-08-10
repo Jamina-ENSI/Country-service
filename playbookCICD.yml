@@ -31,14 +31,14 @@
 
     - name: Push the Docker image to Docker Hub
       docker_image:
-        name: "{{ image_name }}"
+        name: "{{ docker_registry_username }}/{{ image_name }}"
         tag: "{{ image_tag }}"
         push: yes
         source: local
 
     - name: Pull Docker image (optional, for verification or on target nodes)
       docker_image:
-        name: "{{ image_name }}"
+        name: "{{ docker_registry_username }}/{{ image_name }}"
         tag: "{{ image_tag }}"
         source: pull
 
@@ -55,4 +55,5 @@
         namespace: jenkins
         src: service.yaml
         kubeconfig: config    
+
 
