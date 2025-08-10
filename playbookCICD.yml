@@ -23,7 +23,7 @@
       docker_image:     
         build:
           path : "{{dockerfile_path }}"
-        name: "{{ image_name }}:{{ image_tag }}"
+        name: "{{ docker_registry_username }}/{{ image_name }}:{{ image_tag }}"
         source: build
         state: present
         tag: "{{ image_tag }}"
@@ -55,5 +55,6 @@
         namespace: jenkins
         src: service.yaml
         kubeconfig: config    
+
 
 
